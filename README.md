@@ -130,9 +130,6 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 </details>
 
    ## acteurs et fonctionnalités:
+![Screenshot test.](asset/image/acteurs.png)
 
-<details>
-   <summary>analyse</summary>
-  ![Screenshot test.](asset/image/acteurs.png)
- </details>
  test
