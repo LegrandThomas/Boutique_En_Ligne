@@ -131,5 +131,5 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 </details>
        
-         ## Analyse des acteurs et fonctionnalités:
+         ### Analyse des acteurs et fonctionnalités:
 
