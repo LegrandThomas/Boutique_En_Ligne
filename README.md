@@ -125,9 +125,14 @@ git branch -d hotfix/<name>
 
 Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois encore je versionne avec un tag sur la branche Main et je supprime la branche hotfix.
       </details>
-    ![Screenshot test.](asset/image/acteurs.png)
+  
    
 </details>
 
-   
+   ## acteurs et fonctionnalités:
+
+<details>
+   <summary>analyse</summary>
+     ![Screenshot test.](asset/image/acteurs.png)
+ </details>
 
