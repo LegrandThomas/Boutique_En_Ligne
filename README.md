@@ -2,52 +2,50 @@
 ## Projet:
 
 <details>
-  <summary>Un système de gestion des produits pour un magasin en ligne</summary>
-  Une entreprise de magasin en ligne souhaite gérer efficacement ses stocks de produit, ajuster les prix , permettre aux clients de faire des commandes et de répondre aux besoins des clients de manière rapide et précise.
-  </details>
+   <summary>Un système de gestion des produits pour un magasin en ligne</summary>
+    Une entreprise de magasin en ligne souhaite gérer efficacement ses stocks de produit, ajuster les prix , permettre aux clients de faire des commandes et de             répondre aux besoins des clients de manière rapide et précise.
+ </details>
   
-  ## Contexte du projet:
+ ## Contexte du projet:
   
   <details>
-  <summary>contexte</summary>
-  Vous avez été chargé de développer un système de gestion des produits pour un magasin en ligne. L'objectif est de permettre aux propriétaires du magasin de gérer efficacement leur catalogue de produits, d'ajouter de nouveaux produits, de mettre à jour les informations existantes et de suivre les stocks. Voici un ensemble de fonctionnalités pour le système de gestion des produits :
+      <summary>contexte</summary>
+      Vous avez été chargé de développer un système de gestion des produits pour un magasin en ligne. L'objectif est de permettre aux propriétaires du magasin de gérer       efficacement leur catalogue de produits, d'ajouter de nouveaux produits, de mettre à jour les informations existantes et de suivre les stocks. Voici un ensemble       de fonctionnalités pour le système de gestion des produits :
 
-**Gestion des catégories **:
-Les propriétaires du magasin doivent pouvoir créer, modifier et supprimer des catégories de produits.
-Chaque produit doit être associé à une ou plusieurs catégories pour une organisation facile du catalogue.
+      **Gestion des catégories **:
+      Les propriétaires du magasin doivent pouvoir créer, modifier et supprimer des catégories de produits.
+      Chaque produit doit être associé à une ou plusieurs catégories pour une organisation facile du catalogue.
 
-Ajout et modification de produits :
-Les propriétaires du magasin doivent pouvoir ajouter de nouveaux produits en fournissant des détails tels que le nom, la description, les images, les prix, etc.
-Ils doivent également pouvoir modifier les informations existantes pour mettre à jour les prix, les descriptions, les images, etc.
+      Ajout et modification de produits :
+      Les propriétaires du magasin doivent pouvoir ajouter de nouveaux produits en fournissant des détails tels que le nom, la description, les images, les prix, etc.
+      Ils doivent également pouvoir modifier les informations existantes pour mettre à jour les prix, les descriptions, les images, etc.
 
-Gestion des variantes de produits :
-Certains produits peuvent avoir des variantes, tels que différentes tailles, couleurs, options, etc.
-Les propriétaires du magasin doivent pouvoir gérer ces variantes et spécifier les stocks disponibles pour chaque variante.
+      Gestion des variantes de produits :
+      Certains produits peuvent avoir des variantes, tels que différentes tailles, couleurs, options, etc.
+      Les propriétaires du magasin doivent pouvoir gérer ces variantes et spécifier les stocks disponibles pour chaque variante.
 
-Gestion des stocks :
-Le système doit permettre aux propriétaires du magasin de suivre les niveaux de stock de chaque produit.
-Ils doivent pouvoir ajouter des stocks lorsqu'ils reçoivent de nouvelles livraisons et mettre à jour les quantités vendues.
+      Gestion des stocks :
+      Le système doit permettre aux propriétaires du magasin de suivre les niveaux de stock de chaque produit.
+      Ils doivent pouvoir ajouter des stocks lorsqu'ils reçoivent de nouvelles livraisons et mettre à jour les quantités vendues.
 
-​
 
-Gestion des promotions et des remises :
-Les propriétaires du magasin doivent pouvoir définir des promotions et des remises sur certains produits ou catégories.
-Ils doivent pouvoir spécifier les dates de validité, les prix réduits, les conditions d'application, etc.
+      Gestion des promotions et des remises :
+      Les propriétaires du magasin doivent pouvoir définir des promotions et des remises sur certains produits ou catégories.
+      Ils doivent pouvoir spécifier les dates de validité, les prix réduits, les conditions d'application, etc.
 
-​
 
-Gestion des avis et des évaluations :
-Les clients doivent pouvoir laisser des avis et des évaluations sur les produits.
-Les propriétaires du magasin doivent pouvoir afficher, gérer et répondre à ces avis.
+      Gestion des avis et des évaluations :
+      Les clients doivent pouvoir laisser des avis et des évaluations sur les produits.
+      Les propriétaires du magasin doivent pouvoir afficher, gérer et répondre à ces avis.
 
-Recherche et filtrage :
-Le système doit permettre aux propriétaires du magasin de rechercher des produits par nom, catégorie, prix, etc.
-Des options de filtrage avancées peuvent être fournies pour faciliter la navigation et la recherche des produits.
+      Recherche et filtrage :
+      Le système doit permettre aux propriétaires du magasin de rechercher des produits par nom, catégorie, prix, etc.
+      Des options de filtrage avancées peuvent être fournies pour faciliter la navigation et la recherche des produits.
 
-Gestion des commandes :
-Le système doit être intégré à la gestion des commandes pour suivre les ventes de produits et ajuster les stocks en conséquence.
+      Gestion des commandes :
+      Le système doit être intégré à la gestion des commandes pour suivre les ventes de produits et ajuster les stocks en conséquence.
 
-Ce système de gestion des produits permettra aux propriétaires du magasin de gérer efficacement leur catalogue en ligne, de suivre les stocks, d'ajuster les prix et de répondre aux besoins des clients de manière rapide et précise.
+      Ce système de gestion des produits permettra aux propriétaires du magasin de gérer efficacement leur catalogue en ligne, de suivre les stocks, d'ajuster les prix       et de répondre aux besoins des clients de manière rapide et précise.
 
   </details>
   
