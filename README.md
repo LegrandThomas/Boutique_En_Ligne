@@ -130,3 +130,8 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 
 </details>
+       
+         ## Analyse des acteurs et fonctionnalités:
+
+![Screenshot des acteurs identifiés et leurs fonctionnalités .](![image](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/b40e2bc0-67e3-451a-a964-273e9c22d5c3)
+)
