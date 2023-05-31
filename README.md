@@ -129,5 +129,5 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    
 </details>
 
-       
+       ![Screenshot test.](asset/image/acteurs.png)
 
