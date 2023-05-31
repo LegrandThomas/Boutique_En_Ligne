@@ -128,8 +128,9 @@ git branch -d hotfix/<name>
 Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois encore je versionne avec un tag sur la branche Main et je supprime la branche hotfix.
       </details>
 
-    ## Analyse des acteurs et fonctionnalités:
+   
 </details>
        
-     
+     ## Analyse des acteurs et des fonctionnalités
+       
 
