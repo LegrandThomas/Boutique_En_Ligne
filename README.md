@@ -136,6 +136,6 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 <details>
    <summary>use case 1 </summary>
-![Screenshot test.](asset/image/usecase1.png)
+![Screenshot usecase1.](asset/image/usecase1.png)
         </details>
 
