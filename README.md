@@ -137,5 +137,6 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 <details>
    <summary>use case 1 </summary>
 ![usecase1](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/2a768d40-cebf-4dba-a35f-b23163d72d21)
+![Screenshot test2.](asset/image/usecase1.png)
         </details>
 
