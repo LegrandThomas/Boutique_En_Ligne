@@ -132,7 +132,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    ## acteurs et fonctionnalités:
 ![Screenshot test.](asset/image/acteurs.png)
 
-   ## use case
+   ## mes use case
 
 <details>
    <summary>use case 1 </summary>
@@ -140,6 +140,20 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
         </details>
 
 <details>
-   <summary>use case 1 </summary>
+   <summary>use case 2 </summary>
 ![usecase2](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/33036cbf-1f45-4746-aac3-fdc0b30f68e8)
         </details>
+
+<details>
+   <summary>use case 3 </summary>
+![usecase3](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/0945a5e6-d37a-4d5d-ab22-a9230e935e2e)
+
+        </details>
+
+## régles
+
+<details>
+
+
+   
+</details>
