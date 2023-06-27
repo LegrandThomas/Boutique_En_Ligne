@@ -137,18 +137,22 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 <details>
    <summary>use case 1 </summary>
 ![usecase1](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/2a768d40-cebf-4dba-a35f-b23163d72d21)
-        </details>
+</details>
 
 <details>
    <summary>use case 2 </summary>
 ![usecase2](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/33036cbf-1f45-4746-aac3-fdc0b30f68e8)
-        </details>
+</details>
 
 <details>
    <summary>use case 3 </summary>
 ![usecase3](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/0945a5e6-d37a-4d5d-ab22-a9230e935e2e)
+</details>
 
-        </details>
+<details>
+   <summary>use case 4</summary>
+![usecase4](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/2a87c0c4-9a87-4b05-8111-0c9158d3c5d0)
+</details>
 
 ## régles
 
