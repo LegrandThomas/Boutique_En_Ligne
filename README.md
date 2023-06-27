@@ -139,3 +139,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 ![usecase1](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/2a768d40-cebf-4dba-a35f-b23163d72d21)
         </details>
 
+<details>
+   <summary>use case 1 </summary>
+![usecase2](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/33036cbf-1f45-4746-aac3-fdc0b30f68e8)
+        </details>
