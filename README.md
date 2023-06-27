@@ -132,7 +132,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    ## acteurs et fonctionnalités:
 ![Screenshot test.](asset/image/acteurs.png)
 
-   ## mes use case
+   ## use case
 
 <details>
    <summary>use case 1 </summary>
@@ -158,12 +158,108 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 <details>
  <summary>régle 1:</summary>
-   -une adresse est liée à 0 ou plusieurs moyens de paiement
-   / un moyen de paiement est lié à 1 et 1 seule adresse
+   -un produit appartient à 1 ou plusieurs catégorie
+   / une catégorie catégorise 0 ou plusieurs produits
 </details>
+
 <details>
  <summary>régle 2:</summary>
+   -un lieu de stockage stock 0 ou plusieurs produits
+   / un produit se trouve dans 1 et 1 seul lieu de stockage
+</details>
+
+<details>
+ <summary>régle 3:</summary>
+   -un produit est décliné en 1 ou plusieurs variant produit
+   / un variant produit correspond à 1 et 1 seul produit
+</details>
+
+<details>
+ <summary>régle 4:</summary>
+   -un produit peut correspondre à 0 ou plusieurs détails de commande
+   / un détail de commande correspond à 1 et 1 seul produit
+</details>
+
+<details>
+ <summary>régle 5:</summary>
+   -un lieu de stockage se situe à 1 et 1 seule adresse
+   / une adresse est attribuée à 0 ou 1 lieu de stockage
+</details>
+
+<details>
+ <summary>régle 6:</summary>
+   -un  détail de commande compose 1 et 1 seul commande
+   / une commande est composée de 1 ou plusieurs détails de commande
+</details>
+
+<details>
+ <summary>régle 7:</summary>
+   -un  détail de commande compose 1 et 1 seul commande
+   / une commande est composée de 1 ou plusieurs détails de commande
+</details>
+
+<details>
+ <summary>régle 8:</summary>
+   -une commande est reçue à 1 et 1 seule adresse
+   / une adresse peut recevoir 0 ou plusieurs commandes
+</details>
+
+<details>
+ <summary>régle 9:</summary>
+   -une commande est effectuée par 1 et 1 seul client
+   / un client peut effectuer 0 ou plusieurs commandes
+</details>
+
+<details>
+ <summary>régle 10:</summary>
+   -un client posséde 1 et 1 seule adresse
+   / une adresse est possédée par 0 ou plusieurs clients
+</details>
+
+<details>
+ <summary>régle 11:</summary>
    -un moyen de paiement est utilisé par 1 et 1 seul client
    / un client utilise 1 ou plusieurs moyens de paiements
 </details>
 
+<details>
+ <summary>régle 12:</summary>
+   -un client peut emmmettre 0 ou plusieurs avis
+   / un avis est emis par 1 et 1 seul client
+</details>
+
+<details>
+ <summary>régle 13:</summary>
+   -un avis concerne 1 et 1 seul variant_produit
+   / un variant produit est concerné par 0 ou plusieurs avis
+</details>
+
+<details>
+ <summary>régle 14:</summary>
+   -un variant produit exsiste en 1 et 1 seule taille
+   / une taille peut concerner 0 ou plusieurs produit variant
+</details>
+
+<details>
+ <summary>régle 15:</summary>
+   -un variant produit est conçu en 1 et 1 seule matière
+   / une matière peut concerner 0 ou plusieurs produit variant
+</details>
+
+<details>
+ <summary>régle 16:</summary>
+   -un variant produit est coloré en 1 et 1 seule couleur
+   / une couleur peut concerner 0 ou plusieurs produit variant
+</details>
+
+<details>
+ <summary>régle 17:</summary>
+   -un variant produit peut être illustrer par 0 ou plusieurs images
+   / une image illustre 1 ou plusieurs produit variant
+</details>
+
+<details>
+ <summary>régle 18:</summary>
+   -un variant produit peut être concerner par 0 ou plusieurs promotions
+   / une promotion est appliqué à 1 et 1 seul produit variant
+</details>
