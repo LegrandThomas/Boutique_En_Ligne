@@ -157,7 +157,11 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 ## régles
 
 <details>
+ <summary>
+   -une adresse est liée à 0 ou plusieurs moyens de paiement
+   -un moyen de paiement est lié à 1 et 1 seule adresse
 
-
-   
+   -un moyen de paiement est utilisé par 1 et 1 seul client
+   -un client utilise 1 ou plusieurs moyens de paiements
+</summary>
 </details>
