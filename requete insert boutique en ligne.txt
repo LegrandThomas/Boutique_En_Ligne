@@ -1,0 +1,36 @@
+INSERT INTO `taille` (`id_taille`, `valeur`, `created_at`, `updated_at`) VALUES (NULL, 'S', '2023-06-02', '2023-06-02'), (NULL, 'M', '2023-06-02', '2023-06-02'), (NULL, 'L', '2023-06-02', '2023-06-02'), (NULL, 'XL', '2023-06-02','2023-06-02');
+
+INSERT INTO `matiere` (`id_matiere`, `valeur`, `created_at`, `updated_at`) VALUES (NULL, 'coton', '2023-06-02', '2023-06-02'), (NULL, 'nylon', '2023-06-02', '2023-06-02');
+
+INSERT INTO `couleur` (`id_couleur`, `valeur`, `created_at`, `updated_at`) VALUES (NULL, 'bleu', '2023-06-02', '2023-06-02'), (NULL, 'blanc', '2023-06-02', '2023-06-02'), (NULL, 'rouge', '2023-06-02', '2023-06-02');
+
+INSERT INTO `adresse` (`id_adresse`, `adresse`, `ville`, `code_postal`, `pays`, `created_at`, `updated_at`) VALUES (NULL, '20 rue du Général', 'Paris', '75003', 'France', '2023-06-02', '2023-06-02'),(NULL, '11 place du Chat', 'Lyon', '69000', 'France', '2023-06-05', '2023-06-05');
+
+INSERT INTO `lieu_stockage` (`id_stock`, `nom_entrepot`, `quantite_minimun`, `quantite_actuelle`, `created_at`, `updated_at`, `id_adresse`) VALUES (NULL, 'entrepot du port', '200', '450', '2023-06-27', '2023-06-27', '1');
+
+INSERT INTO `categorie` (`id_categorie`, `nom`, `description`, `created_at`, `updated_at`) VALUES (NULL, 'vêtements d\'hiver', 'collection des vêtements chauds', '2023-06-27', '2023-06-27'), (NULL, 'vêtements d\'été', 'collection des vêtements légers', '2023-06-27', '2023-06-27');
+
+INSERT INTO `client` (`id_utilisateur`, `nom`, `prenom`, `adresse_mail`, `mot_de_passe`, `created_at`, `updated_at`, `id_adresse`) VALUES (NULL, 'Chirac', 'Jacques', 'chichi@gmail.com', '1234', '2023-06-02','2023-06-02', '3'); 
+
+INSERT INTO `image` (`id_image`, `url`, `created_at`, `updated_at`) VALUES (NULL, 'http://imagesgratuite/image1.png', '2023-06-02','2023-06-02'),(NULL, 'http://imagesgratuite/image2.png', '2023-06-02',  '2023-06-02'),(NULL, 'http://imagesgratuite/image3.png', '2023-06-02', '2023-06-02');
+
+INSERT INTO `produit` (`id_produit`, `nom`, `description`, `prix`, `created_at`, `updated_at`, `id_stock`) VALUES (NULL, 'pantalon', 'pantalon en jean ', '15.00', '2023-06-02', '2023-06-02', '3'), (NULL, 'Pull', 'pull sans manche', '12.99', '2023-06-02', '2023-06-02', '4');
+
+INSERT INTO `variant_produit` (`id_variant_produit`, `quantite_en_stock`, `created_at`, `updated_at`, `id_taille`, `id_matiere`, `id_couleur`, `id_produit`) VALUES (NULL, '30', '2023-06-27', '2023-06-27', '1', '1', '1', '1'), (NULL, '12', '2023-06-27', '2023-06-27', '2', '2', '2', '2');
+
+INSERT INTO `avis` (`id_avis`, `commentaire`, `evaluation`, `created_at`, `updated_at`, `id_utilisateur`, `id_variant_produit`) VALUES (NULL, 'Super ce produit!', '3', '2023-06-02', '2023-06-02', '1', '1');
+
+INSERT INTO `moyenpaiement` (`id_moyen_paiement`, `libelle`, `descriptif`, `created_at`, `updated_at`, `id_utilisateur`, `id_adresse`) VALUES (NULL, 'CB', 'carte bancaire', '2023-06-02', '2023-06-02', '1', '1');
+
+INSERT INTO `commande` (`id_commande`, `date_commande`, `status`, `created_at`, `updated_at`, `id_adresse`, `id_utilisateur`) VALUES (NULL, '2023-06-02', 'en préparation', '2023-06-02', '2023-06-02', '1', '4');
+
+INSERT INTO `promotion` (`id_promo`, `nom`, `description`, `date_debut`, `date_fin`, `pourcentage_reduction`, `conditions_applications`, `created_at`, `updated_at`, `id_variant_produit`) VALUES (NULL, 'solde de juin', 'période de solde de juin', '2023-06-02', '2023-06-30', '10.00', ' sur les pulls blancs', '2023-06-02', '2023-06-02', '2');
+
+INSERT INTO `details_commande` (`id_details_commande`, `quantite`, `created_at`, `updated_at`, `id_produit`, `id_commande`) VALUES (NULL, '12', '2023-06-02', '2023-06-02', '1', '1'), (NULL, '5', '2023-06-02','2023-06-02', '2', '1');
+
+INSERT INTO `illustrer` (`id_variant_produit`, `id_image`) VALUES ('1', '1'), ('2', '2'), ('2', '3');
+
+INSERT INTO `categoriser` (`id_categorie`, `id_produit`) VALUES ('1', '1'), ('2', '2');
+
+
+

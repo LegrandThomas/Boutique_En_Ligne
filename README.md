@@ -1,4 +1,4 @@
-﻿# Boutique_En_Ligne
+﻿﻿# Boutique_En_Ligne
 ## Projet:
 
 <details>
@@ -125,9 +125,16 @@ git branch -d hotfix/<name>
 
 Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois encore je versionne avec un tag sur la branche Main et je supprime la branche hotfix.
       </details>
-
+  
    
 </details>
 
-       
+   ## acteurs et fonctionnalités:
+![Screenshot test.](asset/image/acteurs.png)
 
+## use case
+
+<details>
+   <summary>use case 1 </summary>
+![Screenshot test.](asset/image/usecase1.png)
+        </details>

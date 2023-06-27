@@ -1,0 +1,190 @@
+CREATE DATABASE IF NOT EXISTS boutique_en_ligne;
+
+CREATE TABLE IF NOT EXISTS Adresse(
+   id_adresse INT AUTO_INCREMENT,
+   adresse VARCHAR(50) ,
+   ville VARCHAR(50) ,
+   code_postal VARCHAR(50) ,
+   pays VARCHAR(50) ,
+   created_at DATE,
+   updated_at DATE,
+   PRIMARY KEY(id_adresse)
+);
+
+CREATE TABLE IF NOT EXISTS Categorie(
+   id_categorie INT AUTO_INCREMENT,
+   nom VARCHAR(50) ,
+   description VARCHAR(50) ,
+   created_at DATE,
+   updated_at DATE,
+   PRIMARY KEY(id_categorie)
+);
+
+CREATE TABLE IF NOT EXISTS Lieu_stockage(
+   id_stock INT AUTO_INCREMENT,
+   nom_entrepot VARCHAR(50) ,
+   quantite_minimun INT,
+   quantite_actuelle INT,
+   created_at DATE,
+   updated_at DATE,
+   id_adresse INT NOT NULL,
+   PRIMARY KEY(id_stock),
+   UNIQUE(id_adresse),
+   FOREIGN KEY(id_adresse) REFERENCES Adresse(id_adresse)
+);
+
+CREATE TABLE IF NOT EXISTS image(
+   id_image INT AUTO_INCREMENT,
+   url VARCHAR(200) ,
+   created_at DATE,
+   updated_at DATE,
+   PRIMARY KEY(id_image)
+);
+
+CREATE TABLE IF NOT EXISTS Taille(
+   id_taille INT AUTO_INCREMENT,
+   valeur VARCHAR(50) ,
+   created_at DATE,
+   updated_at DATE,
+   PRIMARY KEY(id_taille)
+);
+
+CREATE TABLE IF NOT EXISTS Matiere(
+   id_matiere INT AUTO_INCREMENT,
+   valeur VARCHAR(50) ,
+   created_at DATE,
+   updated_at VARCHAR(50) ,
+   PRIMARY KEY(id_matiere)
+);
+
+CREATE TABLE IF NOT EXISTS couleur(
+   id_couleur INT AUTO_INCREMENT,
+   valeur VARCHAR(50) ,
+   created_at DATE,
+   updated_at DATE,
+   PRIMARY KEY(id_couleur)
+);
+
+CREATE TABLE IF NOT EXISTS Client(
+   id_utilisateur INT AUTO_INCREMENT,
+   nom VARCHAR(50) ,
+   prenom VARCHAR(50) ,
+   adresse_mail VARCHAR(50) ,
+   mot_de_passe VARCHAR(50)  NOT NULL,
+   created_at DATE,
+   updated_at DATE,
+   id_adresse INT NOT NULL,
+   PRIMARY KEY(id_utilisateur),
+   UNIQUE(adresse_mail),
+   FOREIGN KEY(id_adresse) REFERENCES Adresse(id_adresse)
+);
+
+CREATE TABLE IF NOT EXISTS Produit(
+   id_produit INT AUTO_INCREMENT,
+   nom VARCHAR(50) ,
+   description VARCHAR(50) ,
+   prix DECIMAL(15,2)  ,
+   created_at DATE,
+   updated_at DATE,
+   id_stock INT NOT NULL,
+   PRIMARY KEY(id_produit),
+   FOREIGN KEY(id_stock) REFERENCES Lieu_stockage(id_stock)
+);
+
+CREATE TABLE IF NOT EXISTS Commande(
+   id_commande INT AUTO_INCREMENT,
+   date_commande DATE,
+   status VARCHAR(50) ,
+   created_at DATE,
+   updated_at DATE,
+   id_adresse INT NOT NULL,
+   id_utilisateur INT NOT NULL,
+   PRIMARY KEY(id_commande),
+   FOREIGN KEY(id_adresse) REFERENCES Adresse(id_adresse),
+   FOREIGN KEY(id_utilisateur) REFERENCES Client(id_utilisateur)
+);
+
+CREATE TABLE IF NOT EXISTS Details_commande(
+   id_details_commande INT AUTO_INCREMENT,
+   quantite INT,
+   created_at DATE,
+   updated_at DATE,
+   id_produit INT NOT NULL,
+   id_commande INT NOT NULL,
+   PRIMARY KEY(id_details_commande),
+   FOREIGN KEY(id_produit) REFERENCES Produit(id_produit),
+   FOREIGN KEY(id_commande) REFERENCES Commande(id_commande)
+);
+ 
+CREATE TABLE IF NOT EXISTS MoyenPaiement(
+   id_moyen_paiement INT AUTO_INCREMENT,
+   libelle VARCHAR(50) ,
+   descriptif VARCHAR(50) ,
+   created_at DATE,
+   updated_at DATE,
+   id_utilisateur INT NOT NULL,
+   id_adresse INT NOT NULL,
+   PRIMARY KEY(id_moyen_paiement),
+   FOREIGN KEY(id_utilisateur) REFERENCES Client(id_utilisateur),
+   FOREIGN KEY(id_adresse) REFERENCES Adresse(id_adresse)
+);
+
+CREATE TABLE IF NOT EXISTS Variant_Produit(
+   id_variant_produit INT AUTO_INCREMENT,
+   quantite_en_stock INT,
+   created_at DATE,
+   updated_at DATE,
+   id_taille INT NOT NULL,
+   id_matiere INT NOT NULL,
+   id_couleur INT NOT NULL,
+   id_produit INT NOT NULL,
+   PRIMARY KEY(id_variant_produit),
+   FOREIGN KEY(id_taille) REFERENCES Taille(id_taille),
+   FOREIGN KEY(id_matiere) REFERENCES Matiere(id_mati�re),
+   FOREIGN KEY(id_couleur) REFERENCES couleur(id_couleur),
+   FOREIGN KEY(id_produit) REFERENCES Produit(id_produit)
+);
+
+CREATE TABLE IF NOT EXISTS Promotion(
+   id_promo INT AUTO_INCREMENT,
+   nom VARCHAR(50) ,
+   description VARCHAR(50) ,
+   date_debut DATE,
+   date_fin DATE,
+   pourcentage_reduction DECIMAL(15,2)  ,
+   conditions_applications VARCHAR(50) ,
+   created_at DATE,
+   updated_at DATE,
+   id_variant_produit INT NOT NULL,
+   PRIMARY KEY(id_promo),
+   FOREIGN KEY(id_variant_produit) REFERENCES Variant_Produit(id_variant_produit)
+);
+
+CREATE TABLE IF NOT EXISTS Avis(
+   id_avis INT AUTO_INCREMENT,
+   commentaire VARCHAR(250) ,
+   evaluation INT,
+   created_at DATE,
+   updated_at DATE,
+   id_utilisateur INT NOT NULL,
+   id_variant_produit INT NOT NULL,
+   PRIMARY KEY(id_avis),
+   FOREIGN KEY(id_utilisateur) REFERENCES Client(id_utilisateur),
+   FOREIGN KEY(id_variant_produit) REFERENCES Variant_Produit(id_variant_produit)
+);
+
+CREATE TABLE IF NOT EXISTS Categoriser(
+   id_categorie INT,
+   id_produit INT,
+   PRIMARY KEY(id_categorie, id_produit),
+   FOREIGN KEY(id_categorie) REFERENCES Categorie(id_categorie),
+   FOREIGN KEY(id_produit) REFERENCES Produit(id_produit)
+);
+
+CREATE TABLE IF NOT EXISTS Illustrer(
+   id_image INT,
+   id_variant_produit INT,
+   PRIMARY KEY(id_image, id_variant_produit),
+   FOREIGN KEY(id_image) REFERENCES image(id_image),
+   FOREIGN KEY(id_variant_produit) REFERENCES Variant_Produit(id_variant_produit)
+);
