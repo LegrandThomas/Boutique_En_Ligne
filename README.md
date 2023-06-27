@@ -133,10 +133,6 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 ![Screenshot test.](asset/image/acteurs.png)
 
 ## use case
-   ## acteurs et fonctionnalités:
-![Screenshot test.](asset/image/acteurs.png)
-
-## use case
 
 <details>
    <summary>use case 1 </summary>
