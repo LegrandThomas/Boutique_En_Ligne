@@ -1,13 +1,27 @@
-const express = require('express');
-const app = express();
+require('reflect-metadata');
+const container = require('./helper/injection');
 const bodyParser = require('body-parser');
-const produitsRouter = require('./routes/produits');
+const express = require('express');
+const { InversifyExpressServer, TYPE } = require('inversify-express-utils');
+const ProduitsController = require('./controllers/produitsController');
 
-app.use(bodyParser.urlencoded({ extended: false })); // Pour gérer les données "form urlencoded"
-app.use(express.json()); // Middleware pour parser le corps des requêtes au format JSON
-app.use('/api/produits', produitsRouter);
 
+// Créez une instance du serveur InversifyExpress en utilisant le conteneur existant
+const server = new InversifyExpressServer(container, null, { rootPath: '/api' });
+
+// Configurez les middlewares et les contrôleurs
+server.setConfig((app) => {
+  app.use(express.json());
+  app.use(bodyParser.urlencoded({ extended: false }));
+});
+
+server.setErrorConfig((app) => {
+ 
+});
+
+// Démarrez le serveur
+const app = server.build();
 const port = 3000;
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`Serveur démarré sur le port ${port}`);
 });
