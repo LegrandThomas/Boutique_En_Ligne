@@ -263,3 +263,8 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    -un variant produit peut être concerner par 0 ou plusieurs promotions
    / une promotion est appliqué à 1 et 1 seul produit variant
 </details>
+
+
+   ## MCD / MLD:
+![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
+![Screenshot test.](asset/image/mld_boutique_en_ligne.png)
