@@ -158,7 +158,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 <details>
  <summary>régle 1:</summary>
-   -un produit appartient à 1 ou plusieurs catégorie
+   -un produit appartient à 1 ou plusieurs catégories
    / une catégorie catégorise 0 ou plusieurs produits
 </details>
 
@@ -255,7 +255,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 <details>
  <summary>régle 17:</summary>
    -un variant produit peut être illustrer par 0 ou plusieurs images
-   / une image illustre 1 ou plusieurs produit variant
+   / une image illustre 0 ou plusieurs produit variant
 </details>
 
 <details>
