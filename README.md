@@ -273,9 +273,11 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 <details>
  <summary>Unicité:</summary>
-   * lors de la création d'un produit son nom doit être unique * lors de la crétaion d'une catégorie son nom doit être unique  
    
+   * lors de la création d'un produit son nom doit être unique 
+   * lors de la crétaion d'une catégorie son nom doit être unique  
    * lors de la création d'une taille sa valeur doit être unique  
    * lors de la création d'une couleur sa valeur doit être unique  
-   * lors de la création d'une matiére sa valeur doit être unique  
+   * lors de la création d'une matiére sa valeur doit être unique
+ 
 </details>
