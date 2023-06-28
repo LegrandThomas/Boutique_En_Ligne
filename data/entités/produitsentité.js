@@ -1,4 +1,6 @@
 class Produit {
+
+    
     constructor(nom, prix, description, id_stock) {
       this._nom = nom;
       this._prix = prix;

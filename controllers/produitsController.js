@@ -1,4 +1,4 @@
-const produitsData = require('../data/produitsData');
+const produitsData = require('../services/produitsService');
 
 // Endpoint GET /produits
 exports.getAllProduits = (req, res) => {
