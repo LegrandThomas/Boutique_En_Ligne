@@ -154,7 +154,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 ![usecase4](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/2a87c0c4-9a87-4b05-8111-0c9158d3c5d0)
 </details>
 
-## régles
+## régles de cardinalités
 
 <details>
  <summary>régle 1:</summary>
@@ -268,3 +268,14 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    ## MCD / MLD:
 ![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
 ![Screenshot test.](asset/image/mld_boutique_en_ligne.png)
+
+## régles métiers et contraintes divers
+
+<details>
+ <summary>Unicité:</summary>
+   -lors de la création d'un _produit_ son nom doit être unique
+   -lors de la crétaion d'une _catégorie_ son nom doit être unique
+   -lors de la création d'une _taille_ sa valeur doit être unique
+   -lors de la création d'une _couleur_ sa valeur doit être unique
+   -lors de la création d'une _matiére_ sa valeur doit être unique
+</details>
