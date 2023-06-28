@@ -1,76 +1,100 @@
-const produitsService = require('../services/produitsService');
+const produitsData = require('../data/produitsData');
 
+// Endpoint GET /produits
 exports.getAllProduits = (req, res) => {
-  const produits = produitsService.getAllProduits();
-  produits.then((data) => {
-    res.json(data); 
-  }).catch((error) => {
-    console.error(error);
-    res.status(500).json({ error: 'Une erreur est survenue lors de la récupération des produits.' });
-  });
-};
-
-exports.createProduit = (req, res) => {
-  const nouveauProduit = req.body;
-  produitsService.createProduit(nouveauProduit)
-    .then((id) => {
-      return produitsService.getProduitById(id); // Récupération des détails du produit à partir de son ID
+  produitsData.getAllProduits()
+    .then(produits => {
+      res.json(produits);
     })
-    .then((produit) => {
-      res.status(201).json(produit); // Renvoi des détails du produit
-    })
-    .catch((error) => {
-      console.error(error);
-      res.status(500).json({ error: 'Une erreur est survenue lors de la création du produit.' });
+    .catch(error => {
+      console.error('Erreur lors de la récupération des produits :', error);
+      res.status(500).json({ error: 'Erreur serveur lors de la récupération des produits' });
     });
 };
 
+// Endpoint POST /produits
+exports.createProduit = (req, res) => {
+  const { nom, prix, description, id_stock } = req.body;
+  const produit = { nom, prix, description, id_stock };
 
+  produitsData.createProduit(produit)
+    .then(createdProduit => {
+      res.status(201).json(createdProduit);
+    })
+    .catch(error => {
+      console.error('Erreur lors de la création du produit :', error);
+      res.status(500).json({ error: 'Erreur serveur lors de la création du produit' });
+    });
+};
+
+// Endpoint GET /produits/:id
 exports.getProduitById = (req, res) => {
   const id = req.params.id;
-  produitsService.getProduitById(id)
-    .then((produit) => {
+
+  produitsData.getProduitById(id)
+    .then(produit => {
       if (produit) {
         res.json(produit);
       } else {
-        res.status(404).json({ error: 'Produit non trouvé.' });
+        res.status(404).json({ message: 'Produit non trouvé' });
       }
     })
-    .catch((error) => {
-      console.error(error);
-      res.status(500).json({ error: 'Une erreur est survenue lors de la récupération du produit.' });
+    .catch(error => {
+      console.error('Erreur lors de la récupération du produit :', error);
+      res.status(500).json({ error: 'Erreur serveur lors de la récupération du produit' });
     });
 };
 
+// Endpoint PUT /produits/:id
 exports.updateProduit = (req, res) => {
   const id = req.params.id;
-  const produit = req.body;
-  produitsService.updateProduit(id, produit)
-    .then((success) => {
-      if (success) {
-        res.json({ message: 'Produit mis à jour avec succès.' });
+  const { nom, prix, description, id_stock } = req.body;
+
+  produitsData.getProduitById(id)
+    .then(produit => {
+      if (!produit) {
+        return res.status(404).json({ message: 'Produit non trouvé' });
+      }
+
+      // Utilisez les données existantes ou les nouvelles données fournies dans la requête
+      const updatedProduit = {
+        nom: nom || produit.getNom(),
+        prix: prix || produit.getPrix(),
+        description: description || produit.getDescription(),
+        id_stock: id_stock || produit.getIdStock()
+      };
+
+      return produitsData.updateProduit(id, updatedProduit);
+    })
+    .then(updated => {
+      if (updated) {
+        res.json({ message: 'Produit mis à jour avec succès' });
       } else {
-        res.status(404).json({ error: 'Produit non trouvé.' });
+        res.status(500).json({ error: 'Erreur lors de la mise à jour du produit' });
       }
     })
-    .catch((error) => {
-      console.error(error);
-      res.status(500).json({ error: 'Une erreur est survenue lors de la mise à jour du produit.' });
+    .catch(error => {
+      console.error('Erreur lors de la mise à jour du produit :', error);
+      res.status(500).json({ error: 'Erreur serveur lors de la mise à jour du produit' });
     });
 };
 
+
+
+// Endpoint DELETE /produits/:id
 exports.deleteProduit = (req, res) => {
   const id = req.params.id;
-  produitsService.deleteProduit(id)
-    .then((success) => {
-      if (success) {
-        res.json({ message: 'Produit supprimé avec succès.' });
+
+  produitsData.deleteProduit(id)
+    .then(deleted => {
+      if (deleted) {
+        res.json({ message: 'Produit supprimé avec succès' });
       } else {
-        res.status(404).json({ error: 'Produit non trouvé.' });
+        res.status(404).json({ message: 'Produit non trouvé' });
       }
     })
-    .catch((error) => {
-      console.error(error);
-      res.status(500).json({ error: 'Une erreur est survenue lors de la suppression du produit.' });
+    .catch(error => {
+      console.error('Erreur lors de la suppression du produit :', error);
+      res.status(500).json({ error: 'Erreur serveur lors de la suppression du produit' });
     });
 };
