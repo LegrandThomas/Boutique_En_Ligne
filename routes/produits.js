@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const ProduitsController = require('../dist/produitsController');
+const ProduitsController = require('../controllers/produitsController');
 
-const produitsController = new ProduitsController(); // Create an instance of the controller
+const produitsController = container.resolve(ProduitsController); // Utilisez la même instance créée dans server.js
 
 router.get('/', produitsController.getAllProduits.bind(produitsController));
 router.post('/', produitsController.createProduit.bind(produitsController));

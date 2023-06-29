@@ -1,13 +1,13 @@
 const { Container } = require('inversify');
 require('reflect-metadata');
 
-// Créez une instance du conteneur
 const container = new Container();
 
 // Enregistrez les liaisons de dépendances
-container.bind('ProduitsData').to(require('../data/produitsData')).inSingletonScope();
-container.bind('ProduitsController').to(require('../controllers/produitsController')).inSingletonScope();
-container.bind('ProduitsService').to(require('../services/produitsService')).inSingletonScope();
+container.bind('ProduitsData').to(require('../data/produitsData'));
+container.bind('ProduitsController').to(require('../controllers/produitsController'));
+container.bind('ProduitsService').to(require('../services/produitsService'));
 
-// Exposez le conteneur afin qu'il puisse être utilisé dans d'autres modules
+// console.log(container);
 module.exports = container;
+

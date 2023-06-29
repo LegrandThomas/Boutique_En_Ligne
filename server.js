@@ -3,8 +3,6 @@ const container = require('./helper/injection');
 const bodyParser = require('body-parser');
 const express = require('express');
 const { InversifyExpressServer, TYPE } = require('inversify-express-utils');
-const ProduitsController = require('./controllers/produitsController');
-
 
 // Créez une instance du serveur InversifyExpress en utilisant le conteneur existant
 const server = new InversifyExpressServer(container, null, { rootPath: '/api' });

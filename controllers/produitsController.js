@@ -1,14 +1,20 @@
 const { controller, httpGet, httpPost, httpPut, httpDelete } = require('inversify-express-utils');
-const produitsService = require('../services/produitsService');
 require('reflect-metadata');
-const container = require('../helper/injection');
+// const container = require('../helper/injection');
+const service=require('../services/produitsService')
+const ProduitsData = require('../data/produitsData');
+// console.log(container);
 
 @controller('/produits')
 class ProduitsController {
+  constructor() {
+    this.produitsService = new service(ProduitsData);
+  }
+
   @httpGet('/')
   async getAllProduits(req, res) {
     try {
-      const produits = await produitsService.getAllProduits();
+      const produits = await this.produitsService.getAllProduits();
       // console.log(produits);
       res.json(produits);
     } catch (error) {
@@ -23,7 +29,7 @@ class ProduitsController {
   async getProduitById(req, res) {
     try {
       const id = req.params.id;
-      const produit = await produitsService.getProduitById(id);
+      const produit = await this.produitsService.getProduitById(id);
       if (produit) {
         res.json(produit);
       } else {
@@ -44,7 +50,7 @@ class ProduitsController {
     try {
       const produit = req.body;
       
-      const createdProduit = await produitsService.createProduit(produit);
+      const createdProduit = await this.produitsService.createProduit(produit);
       res.status(201).json(createdProduit);
     } catch (error) {
       console.error('Erreur lors de la création du produit :', error);
@@ -59,7 +65,7 @@ class ProduitsController {
     try {
       const id = req.params.id;
       const produit = req.body;
-      const updatedProduit = await produitsService.updateProduit(id, produit);
+      const updatedProduit = await this.produitsService.updateProduit(id, produit);
       if (updatedProduit) {
         res.json('Produit mis à jour avec succès');
       } else {
@@ -79,7 +85,7 @@ class ProduitsController {
   async deleteProduit(req, res) {
     try {
       const id = req.params.id;
-      const deleted = await produitsService.deleteProduit(id);
+      const deleted = await this.produitsService.deleteProduit(id);
       if (deleted) {
         res.json({
           message: 'Produit supprimé avec succès'

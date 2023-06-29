@@ -1,17 +1,13 @@
 class Produit {
 
-    
     constructor(id,nom, prix, description, id_stock) {
-     
       this._id=id;
       this._nom = nom;
       this._prix = prix;
       this._description = description;
       this._id_stock = id_stock;
-     
     }
     
-  
     getNom() {
       return this._nom;
     }
