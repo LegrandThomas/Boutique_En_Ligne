@@ -3,14 +3,18 @@
 ## Table des matières
 
 1. [Le Projet](#Le-Projet)
-1. [Contexte du projet](#Contexte-du-projet)
-2. [acteurs et fonctionnalités](#acteurs-et-fonctionnalités)
-3. [use case](#use-case)
-4. [MCD / MLD](#mcd--mld)
-5. [régles de cardinalités](#régles-de-cardinalités)
-6. [régles métiers et contraintes divers](#régles-métiers-et-contraintes-divers)
-7. [Controller/services/data](#Controllerservicesdata)
-8. [requetages bdd / postman](#requetages-bdd--postman)
+2. [Contexte du projet](#Contexte-du-projet)
+3. [acteurs et fonctionnalités](#acteurs-et-fonctionnalités)
+4. [use case](#use-case)
+5. [MCD / MLD](#mcd--mld)
+6. [régles de cardinalités](#régles-de-cardinalités)
+7. [régles métiers et contraintes divers](#régles-métiers-et-contraintes-divers)
+9. [Controller/services/data](#Controllerservicesdata)
+10. [requetages bdd / postman](#requetages-bdd--postman)
+11. [IOC/DI](#IOC--DI)
+12. [Commentaires divers](#Commentaires-divers)
+12. [Installation/Mise en route](#Installation--Mise-en-route)
+
 
 
 
@@ -398,8 +402,59 @@ l'erreur  et ou la response est différente selon ou elle est catch
  ![Screenshot test.](asset/image/postman4.png)
  ![Screenshot test.](asset/image/postman5.png)
  ![Screenshot test.](asset/image/postamncatch.png)
-![Screenshot test.](asset/image/postmancatch2.png)
-
-
+ ![Screenshot test.](asset/image/postmancatch2.png)
 
 </details>
+
+
+
+## IOC/DI:
+
+<details>
+   <summary>IOC (Inversion of Control)</summary>
+    L'Inversion de Contrôle est un principe de conception logicielle qui vise à inverser le flux de contrôle d'une application. Dans une application classique, on a le contrôle sur la manière dont les différentes parties du code interagissent les unes avec les autres. Avec l'IOC, cette responsabilité est déléguée à un conteneur ou un framework qui gère les dépendances et les relations entre les composants de l'application. L'IOC favorise donc la modularité, la réutilisabilité et facilite les tests unitaires en permettant de remplacer facilement les dépendances par des faux objets (mocks) lors des tests.
+
+    ⚠ Je ne suis pas encore parvenu à mettre en place le contenaire dans mon apllication, mais ce n'est que partie remise, mais tu en trouveras trace dans les commentaires du code
+ </details>
+
+<details>
+   <summary>DI (Dependency Injection)</summary>
+    L'Injection de Dépendances est un concept étroitement lié à l'IOC. Il s'agit d'un moyen de mettre en œuvre l'IOC en permettant aux dépendances d'un objet d'être injectées par un composant externe. Au lieu de créer directement les objets dont il a besoin, un objet dépendant les reçoit via un constructeur, une méthode ou des propriétés, sans avoir à les instancier lui-même. Cela rend le code plus flexible, car les dépendances peuvent être facilement changées ou mises à jour sans avoir à modifier l'objet dépendant. Le DI facilite également la gestion des dépendances et la réduction des couplages entre les composants.
+
+    ⚠ idem faute de contenaire je ne suis pas parvenu à le mettre en place, mais tu en trouveras trace dans les commentaires du code, je ne suis pas loin, en tout cas je comprend le principe, me reste à l'appliquer
+ </details>
+
+
+ ## Commentaires divers:
+
+<details>
+   <summary>liens utiles</summary>
+
+                *  https://blog.logrocket.com/dependency-injection-node-js-typedi/
+                *  https://grafikart.fr/tutoriels/ioc-container-facades-473
+                *  https://medium.com/ividata-link/c-linjection-de-d%C3%A9pendances-di-et-l-inversion-de-contr%C3%B4le-ioc-48dbe76cff6b
+ </details>
+
+
+ ## Installation/Mise en route:
+
+   l'api tourne sous node, la bdd mysql est hébergé en localhost avec wamp 
+<details>
+   <summary>images</summary>
+
+   ![Screenshot test.](asset/image/bdd.png)
+   ![Screenshot test.](asset/image/co.png)    
+
+   🖢 ici il faudra un .env a la racine du projet avec   host, username, password et nom de la bdd, ou modifier les infos selon les tiennes      
+ </details>
+
+
+<details>
+   <summary>étapes</summary>
+
+                1. cloner le repo
+                2. npm i pour installer les dépendance
+                3. créer et configurer le .env
+                4. dans la console ==>   babel-node server.js
+ </details>
+
