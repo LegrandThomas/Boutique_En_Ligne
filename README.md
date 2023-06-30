@@ -19,7 +19,8 @@
    <summary>Un système de gestion des produits pour un magasin en ligne</summary>
     Une entreprise de magasin en ligne souhaite gérer efficacement ses stocks de produit, ajuster les prix , permettre aux clients de faire des commandes et de             répondre aux besoins des clients de manière rapide et précise.
  </details>
-  
+
+<a name="Contexte_du_projet"></a>
  ### Contexte du projet:
   
   <details>
@@ -68,6 +69,7 @@
 
 <summary>Gitflow</summary>
 
+<a name="Mes_branches"></a>
 #### Mes branches
 
 La branche Main est le miroir de ma production. Il est donc logique que l'on ne puisse y pousser nos modifications directement.
@@ -143,9 +145,11 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    
 </details>
 
+<a name="acteurs_et_fonctionnalités"></a>
    ### acteurs et fonctionnalités:
 ![Screenshot test.](asset/image/acteurs.png)
 
+<a name="use_case"></a>
    ### use case
 
 <details>
@@ -169,10 +173,12 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 </details>
 
 
+<a name="MCD/MLD"></a>
    ### MCD / MLD:
 ![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
 ![Screenshot test.](asset/image/mld_boutique_en_ligne.png)
 
+<a name="régles_de_cardinalités"></a>
    ### régles de cardinalités
 
 <details>
@@ -288,7 +294,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 </details>
 
-
+<a name="régles_métiers_et_contraintes_divers"></a>
 ### régles métiers et contraintes divers
 
 <details>
