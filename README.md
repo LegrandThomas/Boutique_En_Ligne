@@ -340,7 +340,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
  <summary>Services:</summary>
    
   Représente la couche business de mon aplication multicouches responsable du controle de la bonne application des régles métiers
-         par exemple : lors de la création d'un produit c'est cette couche qui va controller que l'id du stock qu'elle à reçu du controller est bien un id présent en                         bdd au niveau des stock en appelant la couche data concernée.
+         par exemple : lors de la création d'un produit c'est cette couche qui va controller que l'id du stock qu'elle à reçu du controller est bien un id présent en                         bdd au niveau des lieux de stockages en appelant la couche data concernée.
  
 </details>
 
