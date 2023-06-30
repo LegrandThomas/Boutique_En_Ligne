@@ -388,5 +388,18 @@ where co.id_commande=1
 
 <details>
    <summary>divers requete postman</summary>
-![postman1](https://github.com/LegrandThomas/Boutique_En_Ligne/issues/6#issue-1782672439)
+voici quelque retour postman
+on peut voir différent rétour d'erreur selon si c'est dans le controler, le service, ou la couche d'acces au donnéees où il y a une une erreur
+l'erreur  et ou la response est différente selon ou elle est catch
+
+ ![Screenshot test.](asset/image/postman1.png)
+ ![Screenshot test.](asset/image/postman2.png)
+ ![Screenshot test.](asset/image/postman3.png)
+ ![Screenshot test.](asset/image/postman4.png)
+ ![Screenshot test.](asset/image/postman5.png)
+ ![Screenshot test.](asset/image/postamncatch.png)
+![Screenshot test.](asset/image/postmancatch2.png)
+
+
+
 </details>
