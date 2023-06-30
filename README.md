@@ -444,6 +444,7 @@ j'appréhende  également mieux le concept de DI/IOC même si je dois encore tra
                 *  https://blog.logrocket.com/dependency-injection-node-js-typedi/
                 *  https://grafikart.fr/tutoriels/ioc-container-facades-473
                 *  https://medium.com/ividata-link/c-linjection-de-d%C3%A9pendances-di-et-l-inversion-de-contr%C3%B4le-ioc-48dbe76cff6b
+                *  https://jsmanifest.com/dependency-injection-container-in-javascript/
  </details>
 
 
