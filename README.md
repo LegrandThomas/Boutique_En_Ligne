@@ -162,7 +162,8 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 </details>
 
 ### régles de cardinalités
-
+<details>
+   <summary>régles</summary>
 <details>
  <summary>régle 1:</summary>
    -un produit appartient à 1 ou plusieurs catégories
@@ -271,6 +272,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    / une promotion est appliqué à 1 et 1 seul produit variant
 </details>
 
+</details>
 
    ### MCD / MLD:
 ![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
