@@ -285,8 +285,8 @@ CREATE TABLE IF NOT EXISTS `promotion` (
   `date_fin` date DEFAULT NULL,
   `pourcentage_reduction` decimal(15,2) DEFAULT NULL,
   `conditions_applications` varchar(50) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` date DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+  `updated_at`timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `id_variant_produit` int NOT NULL,
   PRIMARY KEY (`id_promo`),
   KEY `id_variant_produit` (`id_variant_produit`)

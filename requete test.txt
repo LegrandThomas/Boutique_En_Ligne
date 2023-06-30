@@ -1,49 +1,13 @@
-Select nom,prenom,adresse,code_postal,ville,pays from client 
-inner join adresse on (adresse.id_adresse=client.id_adresse); 
-
-SELECT * FROM `variant_produit`
-inner join matiere as m on (m.id_matiere=variant_produit.id_matiere)
-where valeur='nylon'
+// exemple de requetes
 
 
-select * from commande 
-join client on (client.id_utilisateur=commande.id_utilisateur) 
-join details_commande on (details_commande.id_commande=commande.id_commande) 
-GROUP by client.id_utilisateur; 
-
-SELECT nom,description,valeur,prix FROM produit
-inner join decliner on(decliner.id_produit=produit.id_produit)
-inner join couleur on (couleur.id_couleur=decliner.id_couleur)               
-where decliner.id_produit=1;
-
-SELECT nom,description,nom_entrepot,prix,quantite_actuelle,quantite_minimun from produit
-inner join stock on (produit.id_stock=stock.id_stock);
+// requete qui affiche les informations d'un produit de taille 'S' de couleur 'blanc' et en 'Coton'
 
 
-select * from produit
-inner join illustrer on ( produit.id_produit=illustrer.id_produit)
-join image on (image.id_image=illustrer.id_image)
-where produit.nom='pull';
-
-select * from produit
-inner join illustrer on ( produit.id_produit=illustrer.id_produit)
-join image on (image.id_image=illustrer.id_image)
-where produit.nom='pantalon';
-
-SELECT * from moyenpaiement
-join client on (client.id_utilisateur=moyenpaiement.id_utilisateur)
-where client.nom='chirac';
-
-SELECT * from avis
-join client on (client.id_utilisateur=avis.id_utilisateur)
-join produit on (produit.id_produit=avis.id_produit)
-where client.nom='chirac';
-               
-SELECT * from promotion
-join produit on (produit.id_produit=promotion.id_produit)
-where produit.nom='pull';
-
-SELECT nom,description,valeur,prix FROM produit inner join decliner on(decliner.id_produit=produit.id_produit) inner join couleur on (couleur.id_couleur=decliner.id_couleur) where decliner.id_produit=2;
-
-
-              
+select produit.nom,produit.description,produit.prix ,vp.id_variant_produit,vp.quantite_en_stock,t.valeur as taille,c.valeur as couleur ,m.valeur as matière
+from produit
+inner join variant_produit as vp on(produit.id_produit=vp.id_produit)
+INNER JOIN taille AS t on (t.id_taille=vp.id_taille)
+inner join couleur as c on (c.id_couleur=vp.id_couleur)
+inner join matiere as m on(m.id_matiere=vp.id_matiere)
+where t.valeur="S" and c.valeur="Blanc" and m.valeur="coton" 
