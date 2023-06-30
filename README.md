@@ -1,12 +1,28 @@
-﻿# Boutique_En_Ligne
-## Projet:
+﻿# Boutique_En_Ligne  
+
+## Table des matières
+
+1. [Le Projet](#Le-Projet)
+1. [Contexte du projet](#Contexte-du-projet)
+2. [acteurs et fonctionnalités](#acteurs-et-fonctionnalités)
+3. [use case](#use-case)
+4. [MCD / MLD](#mcd--mld)
+5. [régles de cardinalités](#régles-de-cardinalités)
+6. [régles métiers et contraintes divers](#régles-métiers-et-contraintes-divers)
+7. [Controller/services/data](#Controllerservicesdata)
+
+
+
+
+## Le Projet:
 
 <details>
    <summary>Un système de gestion des produits pour un magasin en ligne</summary>
     Une entreprise de magasin en ligne souhaite gérer efficacement ses stocks de produit, ajuster les prix , permettre aux clients de faire des commandes et de             répondre aux besoins des clients de manière rapide et précise.
  </details>
-  
- ## Contexte du projet:
+
+
+ ### Contexte du projet:
   
   <details>
       <summary>contexte</summary>
@@ -45,7 +61,7 @@
       Gestion des commandes :
       Le système doit être intégré à la gestion des commandes pour suivre les ventes de produits et ajuster les stocks en conséquence.
 
-      Ce système de gestion des produits permettra aux propriétaires du magasin de gérer efficacement leur catalogue en ligne, de suivre les stocks, d'ajuster les prix       et de répondre aux besoins des clients de manière rapide et précise.
+      Ce système de gestion des produits permettra aux propriétaires du magasin de gérer efficacement leur catalogue en ligne, de suivre les stocks, d'ajuster les           prix et de répondre aux besoins des clients de manière rapide et précise.
 
   </details>
   
@@ -54,7 +70,8 @@
 
 <summary>Gitflow</summary>
 
-### Mes branches
+
+#### Mes branches
 
 La branche Main est le miroir de ma production. Il est donc logique que l'on ne puisse y pousser nos modifications directement.
 
@@ -129,10 +146,12 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    
 </details>
 
-   ## acteurs et fonctionnalités:
+
+   ### acteurs et fonctionnalités:
 ![Screenshot test.](asset/image/acteurs.png)
 
-   ## use case
+
+   ### use case
 
 <details>
    <summary>use case 1 </summary>
@@ -154,9 +173,19 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 ![usecase4](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/2a87c0c4-9a87-4b05-8111-0c9158d3c5d0)
 </details>
 
-## régles de cardinalités
+
+
+   ### MCD / MLD:
+![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
+![Screenshot test.](asset/image/mld_boutique_en_ligne.png)
+
+
+   ### régles de cardinalités
 
 <details>
+   <summary>Mes différentes cardinalités</summary>
+<details>
+   
  <summary>régle 1:</summary>
    -un produit appartient à 1 ou plusieurs catégories
    / une catégorie catégorise 0 ou plusieurs produits
@@ -264,12 +293,10 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    / une promotion est appliqué à 1 et 1 seul produit variant
 </details>
 
+</details>
 
-   ## MCD / MLD:
-![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
-![Screenshot test.](asset/image/mld_boutique_en_ligne.png)
 
-## régles métiers et contraintes divers
+### régles métiers et contraintes divers
 
 <details>
  <summary>Unicité:</summary>
@@ -281,3 +308,47 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    * lors de la création d'une matiére sa valeur doit être unique
  
 </details>
+
+<details>
+ <summary>Produit:</summary>
+   
+   * lors de la création d'un produit son ID n'a pas à être renseigné 
+   * lors de la création d'un produit son nom est OBLIGATOIRE  type string
+   * lors de la création d'un produit son prix est OBLIGATOIRE  type float
+   * lors de la création d'un produit sa description est OBLIGATOIRE type string 
+   * lors de la création d'un produit l'ID du stock est OBLIGATOIRE et doit CORRESPONDRE à un stock exsistant en base type int 
+   * lors de la création d'un produit son created_at est NON REQUiS type timestamp currentDate 
+   * lors de la création d'un produit son updated_at est NON REQUiS type timestamp currentDate , attributs(updated on UPDATE)
+  
+ Pour les 4 'OBLIGATOIRES', je ne souhaite pas enregistré en base de donnée un produit incomplet, en effet nous avons vu dans les use case que les acteurs pouvaient  
+ consulter le catalogue de produit et je ne souhaite pas qu'ils tombe sur un produit donc il manquerais des informations.  
+ Et pour moi, un produit à obligatoirement un lieu de stockage exsistant en bdd pour la traçabilité
+</details>
+
+
+
+### Controller/services/data
+
+<details>
+ <summary>Controller:</summary>
+   
+   Point d'entrée de l'api via le routing son role se limite à faire les controles standard (input null or empty, sanitize ..) puis apellé le service de la couche        business concernée.
+ 
+</details>
+
+<details>
+ <summary>Services:</summary>
+   
+  Représente la couche business de mon aplication multicouches responsable du controle de la bonne application des régles métiers
+         par exemple : lors de la création d'un produit c'est cette couche qui va controller que l'id du stock qu'elle à reçu du controller est bien un id présent en                         bdd au niveau des lieux de stockages en appelant la couche data concernée.
+ 
+</details>
+
+<details>
+ <summary>Services:</summary>
+   
+  Représente l'unique couche qui communique avec la base de données et qui peux intéragir avec. Elle n'a plus à se soucier des divers controles car ils ont étaientt     réalisés par les couches du dessus, sont rôle n'est que d'effectuer des actions unitaires sur la base de données et de retourner à la couche supérieur (la business)   son retour, afin que cette derniére fasse remonter également son retour à la couche controller qui elle communique avec le client afin de lui renvoyer les résultats
+ 
+</details>
+
+
