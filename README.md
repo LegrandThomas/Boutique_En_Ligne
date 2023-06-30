@@ -11,9 +11,9 @@
 7. [régles métiers et contraintes divers](#régles-métiers-et-contraintes-divers)
 9. [Controller/services/data](#Controllerservicesdata)
 10. [requetages bdd / postman](#requetages-bdd--postman)
-11. [IOC/DI](#IOC--DI)
+11. [IOC/DI](#iocdi)
 12. [Commentaires divers](#Commentaires-divers)
-12. [Installation/Mise en route](#Installation--Mise-en-route)
+12. [Installation/Mise en route](#installationmise-en-route)
 
 
 
@@ -412,6 +412,7 @@ l'erreur  et ou la response est différente selon ou elle est catch
 
 <details>
    <summary>IOC (Inversion of Control)</summary>
+
     L'Inversion de Contrôle est un principe de conception logicielle qui vise à inverser le flux de contrôle d'une application. Dans une application classique, on a le contrôle sur la manière dont les différentes parties du code interagissent les unes avec les autres. Avec l'IOC, cette responsabilité est déléguée à un conteneur ou un framework qui gère les dépendances et les relations entre les composants de l'application. L'IOC favorise donc la modularité, la réutilisabilité et facilite les tests unitaires en permettant de remplacer facilement les dépendances par des faux objets (mocks) lors des tests.
 
     ⚠ Je ne suis pas encore parvenu à mettre en place le contenaire dans mon apllication, mais ce n'est que partie remise, mais tu en trouveras trace dans les commentaires du code
@@ -419,6 +420,7 @@ l'erreur  et ou la response est différente selon ou elle est catch
 
 <details>
    <summary>DI (Dependency Injection)</summary>
+
     L'Injection de Dépendances est un concept étroitement lié à l'IOC. Il s'agit d'un moyen de mettre en œuvre l'IOC en permettant aux dépendances d'un objet d'être injectées par un composant externe. Au lieu de créer directement les objets dont il a besoin, un objet dépendant les reçoit via un constructeur, une méthode ou des propriétés, sans avoir à les instancier lui-même. Cela rend le code plus flexible, car les dépendances peuvent être facilement changées ou mises à jour sans avoir à modifier l'objet dépendant. Le DI facilite également la gestion des dépendances et la réduction des couplages entre les composants.
 
     ⚠ idem faute de contenaire je ne suis pas parvenu à le mettre en place, mais tu en trouveras trace dans les commentaires du code, je ne suis pas loin, en tout cas je comprend le principe, me reste à l'appliquer
@@ -426,6 +428,15 @@ l'erreur  et ou la response est différente selon ou elle est catch
 
 
  ## Commentaires divers:
+
+ Grâce à se projet, les derniéres semaines de formation, l'entreprise, les recherches et nos divers discutions, j'appréhende mieux le concept de multicouches, à chaque couche sa taches et son utilité.
+
+![Screenshot test.](asset/image/bdd.png)
+
+j'appréhende  également mieux le concept de DI/IOC même si je dois encore travailler sa mise en place.
+
+![Screenshot test.](asset/image/ioc.png)
+
 
 <details>
    <summary>liens utiles</summary>
