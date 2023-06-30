@@ -259,9 +259,9 @@ CREATE TABLE IF NOT EXISTS `moyenpaiement` (
 DROP TABLE IF EXISTS `produit`;
 CREATE TABLE IF NOT EXISTS `produit` (
   `id_produit` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(50) DEFAULT NULL,
-  `description` varchar(50) DEFAULT NULL,
-  `prix` decimal(15,2) DEFAULT NULL,
+  `nom` varchar(50) NOT NULL,
+  `description` varchar(50) NOT NULL,
+  `prix` decimal(15,2) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `id_stock` int NOT NULL,

@@ -1,5 +1,15 @@
 const Produit = require('../data/entités/produitsentité');
 
+//voir pour implémentation régles et logiques métiers lorsqu'il y aura ajout des autres classes et tables
+//voir README régles métiers, divers : produits
+
+//voir également DI/IOC
+//ici il faudrait injecté une instance de la classe PorduitsData dans le constructeur (en passant par le container par exemple)
+//plutot que d'instancier la classe via cette classe-ci cela réduirait les dépendances entres les classes
+// et permetrrais une plus grande souplesse et flexibilité du programme
+
+  //****CLASSE ProduitController****/   
+
 class ProduitsService {
 
   constructor(ProduitsData) {

@@ -1,6 +1,11 @@
 const connection = require('../helper/db');
 const Produit = require('./entités/produitsentité');
 
+//ici plus de control, juste de l'action unitaire sur la bdd, et renvoie des response au service, qui lui renverra au controller qui renverra au front
+
+  //****CLASSE ProduitController****/   
+
+
 class ProduitsData {
 
   constructor(produitEntity) {

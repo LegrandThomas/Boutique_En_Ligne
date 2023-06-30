@@ -1,3 +1,7 @@
+//entité représentant un produit en bdd
+
+
+
 class Produit {
 
     constructor(id,nom, prix, description, id_stock) {
