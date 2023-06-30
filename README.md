@@ -3,12 +3,11 @@
 ## Table des matières
 
 1. [Contexte du projet](#Contexte_du_projet)
-2. [Mes branches](#Mes_branches)
-3. [acteurs et fonctionnalités](#acteurs_et_fonctionnalités)
-4. [use case](#use_case)
-5. [MCD / MLD](#MCD/MLD)
-6. [régles de cardinalités](#régles_de_cardinalités)
-7. [régles métiers et contraintes divers](#régles_métiers_et_contraintes_divers)
+2. [acteurs et fonctionnalités](#acteurs_et_fonctionnalités)
+3. [use case](#use_case)
+4. [MCD / MLD](#MCD/MLD)
+5. [régles de cardinalités](#régles_de_cardinalités)
+6. [régles métiers et contraintes divers](#régles_métiers_et_contraintes_divers)
 
 
 
@@ -69,7 +68,7 @@
 
 <summary>Gitflow</summary>
 
-<a name="Mes_branches"></a>
+
 #### Mes branches
 
 La branche Main est le miroir de ma production. Il est donc logique que l'on ne puisse y pousser nos modifications directement.
