@@ -281,3 +281,19 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    * lors de la création d'une matiére sa valeur doit être unique
  
 </details>
+
+<details>
+ <summary>Produit:</summary>
+   
+   * lors de la création d'un produit son ID n'a pas à être renseigné 
+   * lors de la création d'un produit son nom est OBLIGATOIRE  type string
+   * lors de la création d'un produit son prix est OBLIGATOIRE  type float
+   * lors de la création d'un produit sa description est OBLIGATOIRE type string 
+   * lors de la création d'un produit l'ID du stock est OBLIGATOIRE et doit CORRESPONDRE à un stock exsistant en base type int 
+   * lors de la création d'un produit son created_at est NON REQUiS type timestamp currentDate 
+   * lors de la création d'un produit son updated_at est NON REQUiS type timestamp currentDate , attributs(updated on UPDATE)
+  
+ Pour les 4 'OBLIGATOIRES', je ne souhaite pas enregistré en base de donnée un produit incomplet, en effet nous avons vu dans les use case que les acteurs pouvaient  
+ consulter le catalogue de produit et je ne souhaite pas qu'ils tombe sur un produit donc il manquerais des informations.  
+ Et pour moi, un produit à obligatoirement un lieu de stockage exsistant en bdd pour la traçabilité
+</details>
