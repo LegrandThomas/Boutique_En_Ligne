@@ -45,7 +45,7 @@ class ProduitsService {
 
   async createProduit(produit) {
     try {
-      produit = new Produit(null, produit.nom, produit.prix, produit.description, produit.id_stock);
+      produit = new Produit( produit.nom, produit.prix, produit.description, produit.id_stock,null);
       const result = await this.produitsData.createProduit(produit);
       return result;
     } catch (error) {

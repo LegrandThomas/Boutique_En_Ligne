@@ -36,6 +36,7 @@ class ProduitsData {
       this.connection.query(
         'INSERT INTO produit SET ?',
         {
+   
           nom: produit.getNom(),
           prix: produit.getPrix(),
           description: produit.getDescription(),
@@ -46,12 +47,14 @@ class ProduitsData {
             reject(error);
           } else {
             const insertedProduit = new Produit(
+            
               produit.getNom(),
               produit.getPrix(),
               produit.getDescription(),
-              produit.getIdStock()
+              produit.getIdStock(),
+           
             );
-            insertedProduit.setId(results.insertId);
+            insertedProduit.setId(results.insertId),
             resolve(insertedProduit);
           }
         }
