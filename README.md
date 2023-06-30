@@ -356,8 +356,38 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 ### requetages bdd / postman
 
 <details>
- <summary>bdd</summary>
+ <summary>exemple 1 requete bdd</summary>
+   requete pour afficher des informations concernant les ou les produits de taille 'S' en 'Blanc' et en 'Coton'
    
+select produit.nom,produit.description,produit.prix ,vp.id_variant_produit,vp.quantite_en_stock,t.valeur as taille,c.valeur as couleur ,m.valeur as matière
+from produit
+inner join variant_produit as vp on(produit.id_produit=vp.id_produit)
+INNER JOIN taille AS t on (t.id_taille=vp.id_taille)
+inner join couleur as c on (c.id_couleur=vp.id_couleur)
+inner join matiere as m on(m.id_matiere=vp.id_matiere)
+where t.valeur="S" and c.valeur="Blanc" and m.valeur="coton" 
+
+  ![Screenshot test.](asset/image/requete1.png)
+</details>
+
+<details>
+ <summary>exemple  2 requete bdd</summary>
+   requete pour afficher des informations ( nom, prenom, adresse, produit, commandé, quantité etc) concernant la commande n ° 1
+
+select c.nom,c.prenom,adresse.adresse,adresse.ville,adresse.code_postal,adresse.pays,p.nom,p.description,p.prix,dt.quantite as quantité_commandé 
+from adresse
+inner join client as c on (c.id_adresse=adresse.id_adresse)
+inner join commande as co on(co.id_utilisateur=c.id_utilisateur)
+inner join details_commande as dt on (dt.id_commande=co.id_commande)
+inner join produit as p on (p.id_produit=dt.id_produit)
+where co.id_commande=1
+
+  ![Screenshot test.](asset/image/requete2.png)
+</details>
+
+<summary>exemple 1 postman</summary>
+
+
   ![Screenshot test.](asset/image/requete1.png)
 </details>
 
