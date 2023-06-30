@@ -385,11 +385,6 @@ where co.id_commande=1
   ![Screenshot test.](asset/image/requete2.png)
 </details>
 
-<summary>exemple 1 postman</summary>
-
-
-  ![Screenshot test.](asset/image/requete1.png)
-</details>
 
 <details>
    <summary>divers requete postman</summary>
