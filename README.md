@@ -1,4 +1,11 @@
-﻿# Boutique_En_Ligne
+﻿# Boutique_En_Ligne  
+
+## Table of Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+4. [Collaboration](#collaboration)
+5. [FAQs](#faqs)
 ## Projet:
 
 <details>
@@ -6,7 +13,7 @@
     Une entreprise de magasin en ligne souhaite gérer efficacement ses stocks de produit, ajuster les prix , permettre aux clients de faire des commandes et de             répondre aux besoins des clients de manière rapide et précise.
  </details>
   
- ## Contexte du projet:
+ ### Contexte du projet:
   
   <details>
       <summary>contexte</summary>
@@ -54,7 +61,7 @@
 
 <summary>Gitflow</summary>
 
-### Mes branches
+#### Mes branches
 
 La branche Main est le miroir de ma production. Il est donc logique que l'on ne puisse y pousser nos modifications directement.
 
@@ -129,10 +136,10 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    
 </details>
 
-   ## acteurs et fonctionnalités:
+   ### acteurs et fonctionnalités:
 ![Screenshot test.](asset/image/acteurs.png)
 
-   ## use case
+   ### use case
 
 <details>
    <summary>use case 1 </summary>
@@ -154,7 +161,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 ![usecase4](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/2a87c0c4-9a87-4b05-8111-0c9158d3c5d0)
 </details>
 
-## régles de cardinalités
+### régles de cardinalités
 
 <details>
  <summary>régle 1:</summary>
@@ -265,11 +272,11 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 </details>
 
 
-   ## MCD / MLD:
+   ### MCD / MLD:
 ![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
 ![Screenshot test.](asset/image/mld_boutique_en_ligne.png)
 
-## régles métiers et contraintes divers
+### régles métiers et contraintes divers
 
 <details>
  <summary>Unicité:</summary>
