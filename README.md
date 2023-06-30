@@ -2,24 +2,25 @@
 
 ## Table des matières
 
-1. [Contexte du projet](#Contexte_du_projet)
-2. [acteurs et fonctionnalités](#acteurs_et_fonctionnalités)
-3. [use case](#use_case)
-4. [MCD / MLD](#MCD/MLD)
-5. [régles de cardinalités](#régles_de_cardinalités)
-6. [régles métiers et contraintes divers](#régles_métiers_et_contraintes_divers)
+1. [Le Projet](#Le-Projet)
+1. [Contexte du projet](#Contexte-du-projet)
+2. [acteurs et fonctionnalités](#acteurs-et-fonctionnalités)
+3. [use case](#use-case)
+4. [MCD / MLD](#MCD-/-MLD)
+5. [régles de cardinalités](#régles-de-cardinalités)
+6. [régles métiers et contraintes divers](#régles-métiers-et-contraintes-divers)
 
 
 
 
-## Projet:
+## Le Projet:
 
 <details>
    <summary>Un système de gestion des produits pour un magasin en ligne</summary>
     Une entreprise de magasin en ligne souhaite gérer efficacement ses stocks de produit, ajuster les prix , permettre aux clients de faire des commandes et de             répondre aux besoins des clients de manière rapide et précise.
  </details>
 
-<a name="Contexte_du_projet"></a>
+
  ### Contexte du projet:
   
   <details>
@@ -59,7 +60,7 @@
       Gestion des commandes :
       Le système doit être intégré à la gestion des commandes pour suivre les ventes de produits et ajuster les stocks en conséquence.
 
-      Ce système de gestion des produits permettra aux propriétaires du magasin de gérer efficacement leur catalogue en ligne, de suivre les stocks, d'ajuster les prix       et de répondre aux besoins des clients de manière rapide et précise.
+      Ce système de gestion des produits permettra aux propriétaires du magasin de gérer efficacement leur catalogue en ligne, de suivre les stocks, d'ajuster les           prix et de répondre aux besoins des clients de manière rapide et précise.
 
   </details>
   
@@ -144,11 +145,11 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
    
 </details>
 
-<a name="acteurs_et_fonctionnalités"></a>
+
    ### acteurs et fonctionnalités:
 ![Screenshot test.](asset/image/acteurs.png)
 
-<a name="use_case"></a>
+
    ### use case
 
 <details>
@@ -172,12 +173,12 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 </details>
 
 
-<a name="MCD/MLD"></a>
+
    ### MCD / MLD:
 ![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
 ![Screenshot test.](asset/image/mld_boutique_en_ligne.png)
 
-<a name="régles_de_cardinalités"></a>
+
    ### régles de cardinalités
 
 <details>
@@ -293,7 +294,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 </details>
 
-<a name="régles_métiers_et_contraintes_divers"></a>
+
 ### régles métiers et contraintes divers
 
 <details>
