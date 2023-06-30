@@ -388,5 +388,5 @@ where co.id_commande=1
 
 <details>
    <summary>divers requete postman</summary>
-
+![postman1](https://github.com/LegrandThomas/Boutique_En_Ligne/issues/6#issue-1782672439)
 </details>
