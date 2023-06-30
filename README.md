@@ -1,6 +1,7 @@
 ﻿# Boutique_En_Ligne  
 
-## Table of Contents
+## Table des matières
+
 1. [Contexte du projet](#Contexte_du_projet)
 2. [Mes branches](#Mesbranches)
 3. [acteurs et fonctionnalités](#acteurs_et_fonctionnalités)
