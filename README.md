@@ -330,7 +330,8 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 </details>
 
 
-
+ ⚠ ici les régles sont loin d'être complétes , je vais les ajouter à la suite lors de la mise en place des différents services 
+ 
 ### Controller/services/data
 
 <details>
