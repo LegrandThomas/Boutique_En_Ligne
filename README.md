@@ -1,11 +1,17 @@
 ﻿# Boutique_En_Ligne  
 
 ## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
+1. [Contexte du projet](#Contexte_du_projet)
+2. [Mes branches](#Mesbranches)
+3. [acteurs et fonctionnalités](#acteurs_et_fonctionnalités)
+4. [use case](#use_case)
+5. [MCD / MLD](#MCD/MLD)
+6. [régles de cardinalités](#régles_de_cardinalités)
+7. [régles métiers et contraintes divers](#régles_métiers_et_contraintes_divers)
+
+
+
+
 ## Projet:
 
 <details>
@@ -161,10 +167,17 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 ![usecase4](https://github.com/LegrandThomas/Boutique_En_Ligne/assets/103045194/2a87c0c4-9a87-4b05-8111-0c9158d3c5d0)
 </details>
 
-### régles de cardinalités
+
+   ### MCD / MLD:
+![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
+![Screenshot test.](asset/image/mld_boutique_en_ligne.png)
+
+   ### régles de cardinalités
+
 <details>
-   <summary>régles</summary>
+   <summary>Mes différentes cardinalités</summary>
 <details>
+   
  <summary>régle 1:</summary>
    -un produit appartient à 1 ou plusieurs catégories
    / une catégorie catégorise 0 ou plusieurs produits
@@ -274,9 +287,6 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 </details>
 
-   ### MCD / MLD:
-![Screenshot test.](asset/image/mcd_boutique_en_ligne.png)
-![Screenshot test.](asset/image/mld_boutique_en_ligne.png)
 
 ### régles métiers et contraintes divers
 
