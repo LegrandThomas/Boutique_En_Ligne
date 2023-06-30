@@ -9,6 +9,7 @@
 4. [MCD / MLD](#MCD-/-MLD)
 5. [régles de cardinalités](#régles-de-cardinalités)
 6. [régles métiers et contraintes divers](#régles-métiers-et-contraintes-divers)
+7. [Controller/services/data](#Controller/services/data)
 
 
 
@@ -323,3 +324,31 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
  consulter le catalogue de produit et je ne souhaite pas qu'ils tombe sur un produit donc il manquerais des informations.  
  Et pour moi, un produit à obligatoirement un lieu de stockage exsistant en bdd pour la traçabilité
 </details>
+
+
+
+### Controller/services/data
+
+<details>
+ <summary>Controller:</summary>
+   
+   Point d'entrée de l'api via le routing son role se limite à faire les controles standard (input null or empty, sanitize ..) puis apellé le service de la couche        business concernée.
+ 
+</details>
+
+<details>
+ <summary>Services:</summary>
+   
+  Représente la couche business de mon aplication multicouches responsable du controle de la bonne application des régles métiers
+         par exemple : lors de la création d'un produit c'est cette couche qui va controller que l'id du stock qu'elle à reçu du controller est bien un id présent en                         bdd au niveau des stock en appelant la couche data concernée.
+ 
+</details>
+
+<details>
+ <summary>Services:</summary>
+   
+  Représente l'unique couche qui communique avec la base de données et qui peux intéragir avec. Elle n'a plus à se soucier des divers controles car ils ont étaientt     réalisés par les couches du dessus, sont rôle n'est que d'effectuer des actions unitaires sur la base de données et de retourner à la couche supérieur (la business)   son retour, afin que cette derniére fasse remonter également son retour à la couche controller qui elle communique avec le client afin de lui renvoyer les résultats
+ 
+</details>
+
+
