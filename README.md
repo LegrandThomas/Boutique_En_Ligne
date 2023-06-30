@@ -6,10 +6,10 @@
 1. [Contexte du projet](#Contexte-du-projet)
 2. [acteurs et fonctionnalités](#acteurs-et-fonctionnalités)
 3. [use case](#use-case)
-4. [MCD / MLD](#MCD-/-MLD)
+4. [MCD / MLD](#mcd--mld)
 5. [régles de cardinalités](#régles-de-cardinalités)
 6. [régles métiers et contraintes divers](#régles-métiers-et-contraintes-divers)
-7. [Controller/services/data](#Controller/services/data)
+7. [Controller/services/data](#Controllerservicesdata)
 
 
 
