@@ -162,7 +162,7 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 ![usecase1](asset/image/usecase1.png)
 
-
+</details>
 <details>
  <summary>use case 2 </summary>
    
