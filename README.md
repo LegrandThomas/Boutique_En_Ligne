@@ -159,19 +159,26 @@ Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois e
 
 <details>
    <summary>use case 1 </summary>
+
 ![usecase1](asset/image/usecase1.png)
+
+
+<details>
+ <summary>use case 2 </summary>
+   
+![usecase2](asset/image/usecase2.png)
+ </details>
+   
+<details>
+
+   <summary>use case 3 </summary>
+   
+![usecase3](asset/image/usecase3.png)
 </details>
 
 <details>
-   <summary>use case 2 </summary>
-![usecase2](asset/image/usecase2.png)
-<details>
-   
-   <summary>use case 3 </summary>
-![usecase3](asset/image/usecase3.png)
-
-<details>
    <summary>use case 4</summary>
+   
 ![usecase4](asset/image/usecase4.png)
 </details>
 
